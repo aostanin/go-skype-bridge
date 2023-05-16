@@ -293,7 +293,7 @@ func (user *User) Connect(evenIfNoSession bool) bool {
 }
 
 func (user *User) RestoreSession() bool {
-	if user.Session != nil {
+	//if user.Session != nil {
 		var password string
 		var username string
 		ret := user.bridge.DB.User.GetCredentialsByMXID(user.MXID, &password, &username)
@@ -334,7 +334,7 @@ func (user *User) RestoreSession() bool {
 		//user.SetSession(&sess)
 		//user.log.Debugln("Session restored successfully")
 		//user.PostLogin()
-	}
+	//}
 	return true
 }
 

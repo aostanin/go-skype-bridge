@@ -317,7 +317,7 @@ func (bridge *Bridge) UpdateBotProfile() {
 func (bridge *Bridge) StartUsers() {
 	bridge.Log.Debugln("Starting users")
 	for _, user := range bridge.GetAllUsers() {
-		go user.Connect(false)
+		go user.Connect(true)
 	}
 	bridge.Log.Debugln("Starting custom puppets")
 	for _, loopuppet := range bridge.GetAllPuppetsWithCustomMXID() {
